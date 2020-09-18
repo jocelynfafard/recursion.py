@@ -6,10 +6,10 @@
 # Breakout: 4 
 
 def sum_n(n): 
-  if n <= 1:
-    return
+  if n <= 0:
+    return 0
   else:
-    return n*sum_n(n-1)
+    return n + sum_n(n-1)
 
 def print_n(s, n):
   if n <= 0:
@@ -21,7 +21,7 @@ def print_n(s, n):
 def run():
   num = int(input("Enter an int: "))
   print(f"sum is {sum_n(num)}.")
-  phrase = str(input("Enter a string: "))
+  phrase = input("Enter a string: ")
   print_n(phrase,num)
 
 if __name__ == "__main__":
